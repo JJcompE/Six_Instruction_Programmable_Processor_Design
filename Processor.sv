@@ -41,29 +41,4 @@ always @* begin
    ALU_Out <= DP_aluQ;
 end
  
-
 endmodule
-
-
-/* OLD
-module Project(CLOCK_50, SW, KEY, HEX0, HEX1, HEX2, HEX4, HEX5, HEX6, HEX7, StateOut);
-    
-    
-	input CLOCK_50;
-  input [17:0]SW;
-  input [3:0]KEY;  
-  output [0:6]HEX0, HEX1, HEX2, HEX4, HEX5, HEX6, HEX7;
-  output [3:0]StateOut;
-  
-  logic D_wr, RF_s, RF_W_en;
-  logic [7:0] D_addr;
-  logic [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr;
-  logic [2:0] Alu_s0;
-  
- //Reset; - which switch links to reset? using SW[1] for now?
-  //module ControlUnit(Clk, Reset, D_addr, RF_W_addr, RF_Ra_addr, RF_Rb_addr, Alu_s0, D_wr, RF_s, RF_W_en, StateOut);
-ControlUnit controlModule(CLOCK_50, SW[1], D_addr, RF_W_addr, RF_Ra_addr, RF_Rb_addr, Alu_s0, D_wr, RF_s, RF_W_en, StateOut);
-  
-  //module Datapath(Clock, dmWriteEn, dmAddr, MuxS, regAaddr,  regBaddr, regWaddr, regWriteEn, aluSel);
-Datapath dataModule (CLOCK_50, D_wr, D_addr, RF_s, RF_Ra_addr,  RF_Rb_addr, RF_W_addr, RF_W_en, Alu_s0);
-  */
